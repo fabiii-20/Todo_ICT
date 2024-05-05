@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("password-error").innerText = "";
 
        
-        function handleLoginResult(isLoggedIn) {
+        function callback(isLoggedIn) {
             if (isLoggedIn) {
                 
                 window.location.href = "index.html"; 
@@ -29,10 +29,10 @@ document.addEventListener("DOMContentLoaded", function () {
        
         if (username === "admin" && password === "12345") {
          
-            handleLoginResult(true);
+            callback(true);
         } else {
             
-            handleLoginResult(false);
+            callback(false);
         }
     });
 });
